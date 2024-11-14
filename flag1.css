@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+.flag:after{
+    /* content: ''; */
+    /* position: absolute; */
+    width: px;
+    height: 100%;
+    background: #fff;
+}
+
+.flag:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    height: calc(200px / 2.2);
+    border-top: calc(200px / 3) solid #FF9933;
+    border-bottom: calc(200px / 3) solid #138808;
+}
+
+.flag img {
+    position: absolute;
+    width: calc(200px / 3);
+    animation: rotate 24s linear infinite;
+}
+/* .chakra {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 1;
+    animation: fadeIn 0.5s linear forwards;
+    animation-delay: 3s;
+} */
+/* .chakra img {
+    margin-top: 0.5vh;
+    height: 34vh;
+    animation: rotate 20s linear infinite;
+} */
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.flagRef{
+    transform: perspective(6px)
+    translateY(-50px) rotateX(2deg)
+    scale(1.3,0.6);
+    opacity: 0.5;
+}
